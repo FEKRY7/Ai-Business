@@ -26,40 +26,6 @@ export class MessageService {
     ) { }
 
     // Create Message
-    // async create(
-    //     conversationId: string,
-    //     createMessageDto: CreateMessageDto,
-    // ): Promise<Message> {
-    //     const { content, role } = createMessageDto;
-
-    //     const conversation =
-    //         await this.conversationRepository.findOne({
-    //             where: {
-    //                 id: conversationId,
-    //             },
-    //         });
-
-    //     if (!conversation) {
-    //         throw new NotFoundException(
-    //             'Conversation not found.',
-    //         );
-    //     }
-
-    //     if (conversation.status === 'CLOSED') {
-    //         throw new BadRequestException(
-    //             'Cannot add message to a closed conversation.',
-    //         );
-    //     }
-
-    //     const message = this.messageRepository.create({
-    //         content,
-    //         role,
-    //         conversation,
-    //     });
-
-    //     return await this.messageRepository.save(message);
-    // }
-
     async create(
         conversationId: string,
         createMessageDto: CreateMessageDto,
